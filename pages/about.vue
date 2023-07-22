@@ -1,6 +1,9 @@
 <template>
     <div>
-        <h1>A propos</h1>
+        <h2>A propos</h2>
+        <p>Extrait de : L’affirmation de soi<br>
+        Auteur : Dominique Chalvin<br>
+        Editions ESF</p>
     </div>
 </template>
 

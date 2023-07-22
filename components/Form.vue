@@ -1,15 +1,22 @@
 <template>
-    <form @submit.prevent="calculateScore">
-      <div v-for="(question, index) in questions" :key="index">
-        <label :for="'question' + index">{{ question.text }}</label>
-        <input type="radio" :id="'question' + index" :name="'question' + index" value="true" v-model="answers[question.id]" required>
-        <label :for="'question' + index">Vrai</label>
-        <input type="radio" :id="'question' + index" :name="'question' + index" value="false" v-model="answers[question.id]" required>
-        <label :for="'question' + index">Faux</label>
+    <form @submit.prevent="calculateScore" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
+      <div v-for="(question, index) in questions" :key="index" class="mb-4">
+        <label :for="'question' + index" class="block text-gray-700 text-sm font-bold mb-2">{{ question.text }}</label>
+        <div class="mt-2">
+          <label :for="'question' + index" class="inline-flex items-center">
+            <input type="radio" :id="'question' + index" :name="'question' + index" value="true" v-model="answers[question.id]" class="form-radio">
+            <span class="ml-2">Vrai</span>
+          </label>
+          <label :for="'question' + index" class="inline-flex items-center ml-6">
+            <input type="radio" :id="'question' + index" :name="'question' + index" value="false" v-model="answers[question.id]" class="form-radio">
+            <span class="ml-2">Faux</span>
+          </label>
+        </div>
       </div>
-      <button type="submit" class="btn m-4">Valider</button>
+      <button type="submit" class="btn mx-auto">Valider</button>
     </form>
   </template>
+  
   
   <script setup>
   import { ref, reactive } from 'vue';
