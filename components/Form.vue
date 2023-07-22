@@ -24,10 +24,10 @@
   });
   
   let scores = reactive({
-      assertiveness: 0,
-      selfEsteem: 0,
-      empathy: 0,
-      stress: 0
+      escape: 0,
+      attack: 0,
+      manipulation: 0,
+      assertiveness: 0
   });
 
   const reset = () => {

@@ -1,10 +1,10 @@
 <template>
     <div>
       <h2>Scores:</h2>
-      <p>Assertiveness: {{ scores.assertiveness }}</p>
-      <p>Self-Esteem: {{ scores.selfEsteem }}</p>
-      <p>Empathy: {{ scores.empathy }}</p>
-      <p>Stress: {{ scores.stress }}</p>
+      <p>Assertiveness: {{ scores.escape }}</p>
+      <p>Self-Esteem: {{ scores.attack }}</p>
+      <p>Empathy: {{ scores.manipulation }}</p>
+      <p>Stress: {{ scores.assertiveness }}</p>
     </div>
   </template>
   
