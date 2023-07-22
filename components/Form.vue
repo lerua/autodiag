@@ -2,12 +2,12 @@
     <form @submit.prevent="calculateScore">
       <div v-for="(question, index) in questions" :key="index">
         <label :for="'question' + index">{{ question.text }}</label>
-        <input type="radio" :id="'question' + index" :name="'question' + index" value="true" v-model="answers[question.id]">
+        <input type="radio" :id="'question' + index" :name="'question' + index" value="true" v-model="answers[question.id]" required>
         <label :for="'question' + index">Vrai</label>
-        <input type="radio" :id="'question' + index" :name="'question' + index" value="false" v-model="answers[question.id]">
+        <input type="radio" :id="'question' + index" :name="'question' + index" value="false" v-model="answers[question.id]" required>
         <label :for="'question' + index">Faux</label>
       </div>
-      <button type="submit" class="btn">Submit</button>
+      <button type="submit" class="btn m-4">Valider</button>
     </form>
   </template>
   

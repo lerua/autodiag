@@ -3,6 +3,9 @@
     <div>
       <h1 class="font-bold">Autodiagnostic d'assertivité</h1>
       <h2>Formulaire</h2>
+      <p class="pb-4">Répondez spontanément aux questions :<br>
+- Plutôt vrai : si vous pensez ou agissez de cette façon la plupart du temps,<br>
+- Plutôt faux : si vous ne faites ou ne pensez que rarement ce qui est décrit.</p>
       <Form @submit="handleScores"/>
       <Results v-if="submitted" :scores="scores" />
     </div>
